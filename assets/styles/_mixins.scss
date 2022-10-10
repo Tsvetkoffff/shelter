@@ -1,0 +1,132 @@
+@mixin flex-between() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center-wrap() {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@mixin v-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin logo-subtitle() {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.867rem;
+  margin: 9px 0 0 4px;
+  letter-spacing: 0.1em;
+}
+
+@mixin paragraph-l() {
+  font-family: 'Arial Regular', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  color: $color-dark-xl;
+}
+
+@mixin paragraph-mobile-menu() {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  color: $color-light-s;
+}
+
+@mixin title-3() {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.333rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+@mixin title-3-black() {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.333rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: black;
+}
+
+@mixin title-3-mobile() {
+  font-size: 1.667rem;
+  letter-spacing: 0.06em;
+}
+@mixin title-3-mobile-black() {
+  font-size: 1.667rem;
+  letter-spacing: 0.06em;
+  color: black;
+}
+
+@mixin title-4() {
+  @include title-3;
+  font-size: 1.333rem;
+  line-height: 115%;
+}
+@mixin title-4-black() {
+  @include title-3-black;
+  font-size: 1.333rem;
+  line-height: 115%;
+}
+@mixin title-5() {
+  @include title-3;
+  font-size: 1rem;
+  line-height: 110%;
+}
+@mixin title-5-black() {
+  @include title-3-black;
+  font-size: 1rem;
+  line-height: 110%;
+}
+
+@mixin pets-card-title() {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.333rem;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  text-align: center;
+}
+
+@mixin button() {
+  font-size: 1.1333333333333333rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+
+@mixin button-primary() {
+  background-color: $color-primary;
+  color: $color-dark-3xl;
+  border: none;
+}

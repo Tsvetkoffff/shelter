@@ -1,0 +1,100 @@
+.footer {
+  background: url(../../assets/images/footer-gradient-background.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 13%;
+  row-gap: 30px;
+  padding: 40px 0 0 0;
+}
+
+.footer-title {
+  @include title-3;
+  color: $color-light-xl;
+  margin: 17px 0 0 0;
+}
+
+.contacts {
+  max-width: 280px;
+}
+
+.location {
+  max-width: 300px;
+}
+
+.footer-img {
+  width: 300px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.contact {
+  @include title-4;
+  color: $color-primary;
+  display: block;
+  padding-left: 59px;
+}
+
+.contact[target='_blank'] {
+  padding-left: 40px;
+}
+
+.contacts-email {
+  position: relative;
+
+  &::before {
+    content: url(../../assets/icons/icon-email.svg);
+    position: absolute;
+    left: 0px;
+    top: -4px;
+  }
+}
+
+.contacts-phone {
+  position: relative;
+
+  &::before {
+    content: url(../../assets/icons/icon-phone.svg);
+    position: absolute;
+    left: 0px;
+    top: -4px;
+  }
+}
+
+.location-boston {
+  position: relative;
+
+  &::before {
+    content: url(../../assets/icons/icon-marker.svg);
+    position: absolute;
+    left: 0px;
+    top: 5px;
+  }
+}
+
+.location-london {
+  position: relative;
+
+  &::before {
+    content: url(../../assets/icons/icon-marker.svg);
+    position: absolute;
+    left: 0px;
+    top: -4px;
+  }
+}

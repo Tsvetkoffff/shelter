@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/icons/favicon/favicon.ico"
+    />
+    <title>Pets in Shelter</title>
+  </head>
+  <body class="pets-page">
+    <header class="pets-header menu-close" id="header">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="top-wrapper">
+          <div class="logo">
+            <h1 class="title">Cozy House</h1>
+            <h2 class="subtitle">Shelter for pets in Boston</h2>
+          </div>
+          <div class="toggle-wrapper">
+            <div class="menu-toggle"></div>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="top-wrapper">
+            <div class="logo">
+              <a href="../main/index.html">
+                <h1 class="title">Cozy House</h1>
+                <h2 class="subtitle">Shelter for pets in Boston</h2>
+              </a>
+            </div>
+            <div class="toggle-wrapper">
+              <div class="menu-toggle"></div>
+            </div>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="../main/index.html" class="nav-link">
+                About the shelter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" active> Our pets </a>
+            </li>
+            <li class="nav-item">
+              <a href="../main/index.html#help" class="nav-link">
+                Help the shelter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#footer" class="nav-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="pets-main">
+      <section class="friends">
+        <div class="container">
+          <div class="friends-wrapper">
+            <h3 class="title">
+              Our friends who<br />
+              are looking for a house
+            </h3>
+            <ul class="pets-friends-list" id="pets-list"></ul>
+            <nav class="paginator">
+              <div class="prev-buttons">
+                <button
+                  class="button paginator-button"
+                  id="first-page-btn"
+                  disabled="true"
+                >
+                  <<
+                </button>
+                <button
+                  class="button paginator-button"
+                  id="prev-page-btn"
+                  disabled="true"
+                >
+                  <
+                </button>
+              </div>
+              <div class="page-buttons" id="page-buttons"></div>
+              <div class="next-buttons">
+                <button class="button paginator-button" id="next-page-btn">
+                  >
+                </button>
+                <button class="button paginator-button" id="last-page-btn">
+                  >>
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="modal modal-close" id="modal">
+        <div class="modal-wrapper" id="modal-wrapper">
+          <div class="img-box">
+            <img
+              class="img"
+              src="../../assets/images/pets-jennifer.png"
+              alt="Dog Jennifer"
+            />
+          </div>
+          <div class="content-box">
+            <h3 class="name">Jennifer</h3>
+            <h4 class="breed">Dog - Labrador</h4>
+            <p class="description">
+              Jennifer is a sweet 2 months old Labrador that is patiently
+              waiting to find a new forever home. This girl really enjoys being
+              able to go outside to run and play, but won't hesitate to play up
+              a storm in the house if she has all of her favorite toys.
+            </p>
+            <ul class="list">
+              <li class="item"><b>Age:</b> 2 months</li>
+              <li class="item"><b>Inoculations:</b> none</li>
+              <li class="item"><b>Diseases:</b> none</li>
+              <li class="item"><b>Parasites:</b> none</li>
+            </ul>
+          </div>
+          <button class="btn" id="modal-btn">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.42618 6.00003L11.7046 1.72158C12.0985 1.32775 12.0985 0.689213 11.7046 0.295433C11.3108 -0.0984027 10.6723 -0.0984027 10.2785 0.295433L5.99998 4.57394L1.72148 0.295377C1.32765 -0.098459 0.68917 -0.098459 0.295334 0.295377C-0.0984448 0.689213 -0.0984448 1.32775 0.295334 1.72153L4.57383 5.99997L0.295334 10.2785C-0.0984448 10.6723 -0.0984448 11.3108 0.295334 11.7046C0.68917 12.0985 1.32765 12.0985 1.72148 11.7046L5.99998 7.42612L10.2785 11.7046C10.6723 12.0985 11.3108 12.0985 11.7046 11.7046C12.0985 11.3108 12.0985 10.6723 11.7046 10.2785L7.42618 6.00003V6.00003Z"
+                fill="#292929"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <article class="contacts">
+            <h3 class="title footer-title">
+              For questions<br />
+              and suggestions
+            </h3>
+            <a href="mailto:email@shelter.com" class="contact contacts-email"
+              >email@shelter.com</a
+            >
+            <a href="tel:+136745677554" class="contact contacts-phone"
+              >+13 674 567 75 54</a
+            >
+          </article>
+          <article class="location">
+            <h3 class="title footer-title">
+              We are waiting<br />
+              for your visit
+            </h3>
+            <a
+              href="https://goo.gl/maps/s5QZsDLHMu81WydS9"
+              class="contact location-boston"
+              target="_blank"
+            >
+              1 Central Street, Boston<br />
+              (entrance from the store)
+            </a>
+            <a
+              href="https://goo.gl/maps/gQyjgSEsSLxXpRH36"
+              class="contact location-london"
+              target="_blank"
+            >
+              18 South Park, London
+            </a>
+          </article>
+          <img
+            src="../../assets/images/footer-puppy.png"
+            alt="Cute ginger puppy"
+          />
+        </div>
+      </div>
+    </footer>
+    <script src="../../assets/js/lodash.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+.main-header {
+  padding: 60px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(41, 41, 41, 0.6);
+  opacity: 1;
+  z-index: 1;
+}
+
+.top-wrapper {
+  @include flex-between;
+  width: 100%;
+  align-items: center;
+  z-index: 2;
+}
+
+.container > .top-wrapper {
+  display: none;
+}
+
+.toggle-wrapper {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 22px;
+  margin: 0 43px 0 0;
+}
+.menu-toggle {
+  display: block;
+  width: 30px;
+  height: 21px;
+  box-sizing: border-box;
+  border-top: 2px solid $color-primary;
+  border-bottom: 2px solid $color-primary;
+  &::after {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+    width: 30px;
+    height: 2px;
+    background-color: $color-primary;
+    margin: 7px 0;
+  }
+}
+
+.nav {
+  @include flex-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.logo {
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 2.133rem;
+  color: $color-primary;
+}
+
+.subtitle {
+  @include logo-subtitle;
+  color: $color-light-xl;
+}
+
+.nav-list {
+  display: flex;
+  min-width: 480px;
+  z-index: 2;
+}
+
+.nav-link {
+  @include paragraph-l;
+  margin: 0 0 0 36px;
+  padding: 0 0 2px 0;
+  color: $color-dark-s;
+
+  &:hover {
+    color: $color-light-s;
+  }
+
+  &:active {
+    color: $color-light-s;
+    border-bottom: $color-primary solid 2px;
+  }
+
+  &[active] {
+    color: $color-light-s;
+    border-bottom: $color-primary solid 2px;
+  }
+}

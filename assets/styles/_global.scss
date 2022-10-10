@@ -1,0 +1,72 @@
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.title {
+  font-family: 'Georgia Regular', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.button {
+  font-size: 1.1333333333333333em;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: $color-primary;
+  color: $color-dark-3xl;
+  border: none;
+}
+
+.text {
+  font-family: 'Arial Regular', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 160%;
+}
+
+.button:hover {
+  background-color: $color-primary-light;
+}
+
+.hidden {
+  overflow: hidden;
+}

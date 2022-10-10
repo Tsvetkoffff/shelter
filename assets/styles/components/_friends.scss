@@ -1,0 +1,166 @@
+.friends-wrapper {
+  display: flex;
+  gap: 58px;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 80px 0 100px 0;
+}
+
+.pets-main {
+  .friends {
+    margin: 120px 0 0 0;
+  }
+}
+
+.friends {
+  background-color: $color-light-l;
+
+  .slider {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    grid-template-areas: 
+    'prev cards next'
+    ;
+  }
+
+  .friends-list {
+    grid-area: cards;
+    justify-self: center;
+  }
+  .prev {
+    grid-area: prev;
+    align-self: center;
+    justify-self: start;
+  }
+  .next {
+    grid-area: next;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .title {
+    @include title-3;
+    text-align: center;
+  }
+
+  .friends-title {
+    @include pets-card-title;
+  }
+
+  .carousel-wrapper {
+    width: 990px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .transition-right {
+    animation-name: move-right;
+    animation-duration: 0.5s;
+  }
+
+  .transition-left {
+    animation-name: move-left;
+    animation-duration: 0.5s;
+  }
+
+  .main-friends-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 90px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .carousel {
+    display: flex;
+    position: relative;
+    gap: 1px;
+    left: -990px;
+  }
+
+  .pets-friends-list {
+    @include flex-center-wrap;
+    gap: 30px 40px;
+    min-height: 435px;
+  }
+
+  .friends-item {
+    width: 270px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 29px;
+    padding-bottom: 28px;
+    background-color: $color-light-s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-light-xl;
+    }
+    &:hover .friends-button {
+      background-color: $color-primary;
+    }
+  }
+
+  .friends-button {
+    box-sizing: border-box;
+    padding: 13px 43px;
+    border: 2px solid $color-primary;
+    background-color: $color-light-s;
+    color: $color-dark-3xl;
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+
+  .slider-button {
+    box-sizing: border-box;
+    border: 1px solid $color-primary;
+    border-radius: 100%;
+    background-color: $color-light-l;
+    min-width: 52px;
+    min-height: 52px;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+
+  .paginator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+  }
+  .prev-buttons,
+  .page-buttons,
+  .next-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .paginator-button {
+    width: 50px;
+    height: 50px;
+    line-height: 0;
+    letter-spacing: 0;
+    border: 2px solid $color-primary;
+    color: $color-dark-3xl;
+    margin: 0 11px;
+    &.active {
+      background-color: $color-primary;
+    }
+    &[disabled='true'] {
+      border: 2px solid $color-dark-s;
+      color: $color-dark-s;
+      &:hover {
+        background-color: $color-light-l;
+        cursor: auto;
+      }
+    }
+  }
+}

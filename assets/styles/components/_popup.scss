@@ -1,0 +1,92 @@
+.modal-open.modal {
+  display: flex;
+}
+
+.modal-close.modal {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  cursor: pointer;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(41, 41, 41, 0.6);
+  &:hover .btn {
+    background-color: $color-primary-light;
+  }
+}
+.modal-wrapper {
+  background-color: $color-light-s;
+  border-radius: 9px;
+  width: 900px;
+  height: 500px;
+  display: flex;
+  position: relative;
+  cursor: auto;
+  .img {
+    width: 500px;
+    height: 500px;
+  }
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 20px 0 30px;
+  }
+  .name {
+    @include title-3-black;
+    margin: 50px 0 0 0;
+  }
+  .breed {
+    @include title-4-black;
+    margin: 10px 0 0 0;
+  }
+  .description {
+    @include title-5-black;
+    margin: 42px 0 0 0;
+  }
+  .list {
+    margin: 30px 0 0 0;
+  }
+  .item {
+    @include title-5-black;
+    padding-left: 14px;
+    position: relative;
+    margin: 12px 0 0 0;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      box-sizing: border-box;
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: $color-primary;
+      z-index: 2;
+    }
+  }
+  &:hover .btn {
+    background-color: transparent;
+  }
+  .btn {
+    position: absolute;
+    cursor: pointer;
+    top: -50px;
+    right: -40px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $color-primary;
+    border-radius: 100%;
+    background: transparent;
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+}
